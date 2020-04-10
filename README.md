@@ -1,2 +1,0 @@
-# blueprint
-django docker up
