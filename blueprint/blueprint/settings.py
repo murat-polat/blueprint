@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'h_z05*_ed^gje1xf!0_4#n2xswq_k%g53vw)dwbx!z0==6y64-'
+SECRET_KEY = "{{ BLUEPRINT_SECRET_KEY }}"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -74,15 +74,19 @@ WSGI_APPLICATION = 'blueprint.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-      "ENGINE": "django.db.backends.mysql",
-      "HOST": "bp_db_1",
-      "PORT": 3306,
-      "NAME": "blueprint",
-      "USER": "root",
-      "PASSWORD": "superpass",
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "HOST": "{{ MYSQL_HOST }}",
+        "PORT": "{{ MYSQL_PORT }}",
+        "NAME": "{{ BLUEPRINT_MYSQL_DATABASE }}",
+        "USER": "{{ BLUEPRINT_MYSQL_USERNAME }}",
+        "PASSWORD": "{{ BLUEPRINT_MYSQL_PASSWORD }}",
+        "OPTIONS": {
+            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
+
 
 
 # Password validation
@@ -109,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Oslo'
 
 USE_I18N = True
 
