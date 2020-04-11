@@ -4,10 +4,10 @@ services:
   db:
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=superpass
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=blueprint
-      - MYSQL_USER=blue_user
-      - MYSQL_PASSWORD=blue_pass
+      - MYSQL_USER=blueprint
+      - MYSQL_PASSWORD=blueprint
 
   web:
     build: .
