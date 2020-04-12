@@ -77,10 +77,11 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "HOST": "{{ MYSQL_HOST }}",
-        "PORT": "{{ MYSQL_PORT }}",
         "NAME": "{{ BLUEPRINT_MYSQL_DATABASE }}",
         "USER": "{{ BLUEPRINT_MYSQL_USERNAME }}",
         "PASSWORD": "{{ BLUEPRINT_MYSQL_PASSWORD }}",
+        "PORT": 3306,
+        
         "OPTIONS": {
             "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
         },
