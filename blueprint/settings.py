@@ -79,9 +79,7 @@ DATABASES = {
         "HOST": "{{ MYSQL_HOST }}",
         "NAME": "{{ BLUEPRINT_MYSQL_DATABASE }}",
         "USER": "{{ BLUEPRINT_MYSQL_USERNAME }}",
-        "PASSWORD": "{{ BLUEPRINT_MYSQL_PASSWORD }}",
-        "PORT": 3306,
-        
+        "PASSWORD": "{{ BLUEPRINT_MYSQL_PASSWORD }}",                
         "OPTIONS": {
             "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
         },
