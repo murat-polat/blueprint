@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'blueprint.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-            "HOST": "{{ MYSQL_HOST }}",
+            "HOST": "mysql",
             "PORT": 3306,
             "NAME": "blueprint",
             "USER": "blueprint",
