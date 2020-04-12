@@ -76,11 +76,12 @@ WSGI_APPLICATION = 'blueprint.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "HOST": "{{ MYSQL_HOST }}",
-        "NAME": "{{ BLUEPRINT_MYSQL_DATABASE }}",
-        "USER": "{{ BLUEPRINT_MYSQL_USERNAME }}",
-        "PASSWORD": "{{ BLUEPRINT_MYSQL_PASSWORD }}",                
-        "OPTIONS": {
+            "HOST": "{{ MYSQL_HOST }}",
+            "PORT": "{{ MYSQL_PORT }} ",
+            "NAME": "blueprint",
+            "USER": "blueprint",
+            "PASSWORD": "blueprint",
+            "OPTIONS": {
             "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
