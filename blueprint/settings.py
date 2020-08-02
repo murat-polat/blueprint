@@ -77,7 +77,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
             "HOST": "mysql",
-            "PORT": {{MYSQL_PORT}},
+            "PORT": 3306,
             "NAME": "blueprint",
             "USER": "blueprint",
             "PASSWORD": "blueprint",
